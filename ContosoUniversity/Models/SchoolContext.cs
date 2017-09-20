@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ContosoUniversity.Models
 {
-    public class ContosoUniversityContext : DbContext
+    public class SchoolContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -12,14 +12,13 @@ namespace ContosoUniversity.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public ContosoUniversityContext() : base("name=ContosoUniversityContext")
+        public SchoolContext() : base("name=SchoolContext")
         {
-
         }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

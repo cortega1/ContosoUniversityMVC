@@ -1,17 +1,13 @@
-﻿using ContosoUniversity.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-namespace ContosoUniversity.DAL
+namespace ContosoUniversity.Models
 {
-    public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<ContosoUniversityContext>
+    public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<SchoolContext>
     {
-        public SchoolInitializer()
-        {
-            System.Diagnostics.Debug.WriteLine("SchoolInitializer");
-        }
-
-        protected override void Seed(ContosoUniversityContext context)
+        protected override void Seed(SchoolContext context)
         {
             var students = new List<Student>
             {
